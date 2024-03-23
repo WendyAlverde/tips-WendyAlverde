@@ -1,5 +1,18 @@
 # Les commandes git à faire sur le terminal
 
+## Création de repository
+
+Créer un new repository sur GitHub, toutes les commandes sont données par GitHub
+- **git init** = initialiser le repository
+- **git status** = voir l'état de notre repos (commande expliquée plus en détails au-dessus)
+- **git add nom-du-fichier** = Sauvegarder le(s) fichier(s) dans le nouveau repos
+- **git commit -m "nom du commit"** :
+- **git branch -M main** = Renommer la branche courante sur laquelle on se trouve (Par convention de GitHub maintenant c'est main)
+- **git remote add origin lienssh** = quel est le repository distant qui va être lié à ce repo local. Exemple lien ssh : git@github.com:NomGitHub/NomDuRepos.git
+- **git push -u origin main** = On pousse se qu'on a en local sur GitHub
+
+## Autres commandes souvent utilisées
+
 **git clone** = cloner le projet de GitHub sur notre VSC
 
 **git status** = Voir le statut des fichiers :
@@ -36,11 +49,9 @@ Si on préfère garder un historique,  il faut retirer le fast-forward avec --no
 - **git checkout nom-branche** = On se place dans la branche qui va accueillir la fusion (dev)
 - **git merge --no-ff la-branche-quon-veut-merge** (front)
   -  Une page d'écriture s'ouvre : ctrl + X, N *(Je n'ai pas réussi à changer le nom du commit)*
-  -  La branche front existe toujours, la branche dev obtient tous les changements et commit de la branche front
+  -  La branche front existe toujours, la branche dev obtient tous les changements et les commit de la branche front
 
 
 
-Il reste à mettre les créations de repos
- 
     
-*J'ai pris les infos sur les cours O'clock et de la chaîne "Bande de Codeurs" sur Youtube, il a fait deux très bonnes vidéos explicatives*
+*J'ai pris les infos sur les cours O'clock, sur GitHUb et sur la chaîne "Bande de Codeurs" sur Youtube, il a fait deux, très bonnes vidéos explicatives*
