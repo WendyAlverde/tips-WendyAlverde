@@ -25,6 +25,8 @@
 
 **git log** = voir tout les commit
 
+**git pull** = on récupère le projet modifié ailleurs qu'en local
+
 ## Les fusions
 
 Imaginons qu'on a notre branche principale main, une branche dev lier à celle-ci puis une branche front lié à la branche dev.
@@ -36,7 +38,9 @@ Si on préfère garder un historique,  il faut retirer le fast-forward avec --no
   -  Une page d'écriture s'ouvre : ctrl + X, N *(Je n'ai pas réussi à changer le nom du commit)*
   -  La branche front existe toujours, la branche dev obtient tous les changements et commit de la branche front
 
-Il reste à mettre les git pull et création de repos
+
+
+Il reste à mettre les créations de repos
  
     
 *J'ai pris les infos sur les cours O'clock et de la chaîne "Bande de Codeurs" sur Youtube, il a fait deux très bonnes vidéos explicatives*
