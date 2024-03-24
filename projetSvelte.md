@@ -27,7 +27,8 @@
 -	Renommer le fichier app.css en app.scss et le vider 
 -	Changer la route de l’import dans le fichier main.js (app.css en app.scss)
 -	Supprimer le fichier Counter.svelte
--	Dans le fichier jsconfig.json, à la ligne « checkJs » : true, remplacer par false.
+-	Dans le fichier jsconfig.json, à la ligne ```"checkJs" : true,``` remplacer par ```"checkJs": false,```
+-	Dans le fichier package.json, à la ligne ```"dev": "vite",``` remplacer par ```"dev": "vite --open",```
 
 ## Créer les dossiers et fichiers utiles
 
