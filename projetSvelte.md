@@ -42,7 +42,7 @@
 ```
 <script>
   import Router from 'svelte-spa-router'
-  import Header from './lib/components/Haeder.svelte'
+  import Header from './lib/components/Header.svelte'
   import Footer from './lib/components/Footer.svelte'
 </script>
 ```
