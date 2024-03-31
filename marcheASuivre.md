@@ -1,10 +1,18 @@
 # Marche à suivre
 
-## Repo Front
+## Première fois sur Repo Front
+
+- Cloner le repo front
+- Aller sur la branche dev : ```git checkout dev```
+- Ensuite il faut aller dans le dossier ocook : ```cd ocook```
+- Puis faire la commande : ```npm install```
+
+## Travail sur Repo Front
+
 - On va sur la branche dev : ```git checkout dev```
-- On fait un ```git pull``` pour récupérer le travail
+- On fait un ```git pull``` pour récupérer le travail de la branche
 - On créer une branche de la nouvelle fonctionnalité 
-- Quand on push la première fois on fait un ```git push origin nom-de-la-branche```
+- Quand on push la première fois sur la branche on fait un ```git push origin nom-de-la-branche```
 
 ## Pull Request
 
