@@ -11,7 +11,7 @@
 
 - On va sur la branche dev : ```git checkout dev```
 - On fait un ```git pull``` pour récupérer le travail de la branche
-- On créer une branche de la nouvelle fonctionnalité 
+- On créer une branche de la nouvelle fonctionnalité : ```git checkout -b nom-de-la-fonctionnalite```
 - Quand on push la première fois sur la branche on fait un ```git push origin nom-de-la-branche```
 
 ## Pull Request
