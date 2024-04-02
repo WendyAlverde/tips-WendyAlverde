@@ -51,7 +51,7 @@ On utilisera qu'une seule fois les pixels pour initialiser notre taille au site.
 
 Dans notre CSS on commence par mettre :
 - Le CSS utile pour tout notre site :
-  soit le selecteur universel * :
+  - le selecteur universel * :
   ```
   * {
     bordure : 1px rouge; utile pour le débogage CSS
@@ -60,4 +60,25 @@ Dans notre CSS on commence par mettre :
     text-decoration: none; Pour que les liens ne soit plus souligner
     }
   ```
-  
+  - le sélecteur de pseudo-classe ```:root``` même chose que mettre ```html``` :
+  ```
+  background-color: white;
+	/* Maintenant si on fait met une taille : 500px/16px = 31,25rem tout s'armonise en conséquence donc on ne met plus d'autre px dans le reste du projet*/
+	font-size: 16px;
+    /* Toutes les couleurs utilisées sur le site */
+    --color-text: #00330d;
+    --background-body: #ffffff;
+      }
+  ```
+- Ensuite on fait des parties de CSS 
+  - On commente chaque partie : Partie Header, partie Home, partie About us etc
+- On fait en sorte de ne pas se répéter, on peut donc écrire notre CSS de cette manière :
+```
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: var(--color-text);
+    text-transform: uppercase;
+} 
+```
+- Les média queries
+  ```@media screen and (max-width: 768px) { /*Mobile*/} ```
