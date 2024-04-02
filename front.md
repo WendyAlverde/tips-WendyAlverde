@@ -62,6 +62,7 @@ Dans notre CSS on commence par mettre :
   ```
   - le sélecteur de pseudo-classe ```:root``` même chose que mettre ```html``` :
   ```
+  :root {
   background-color: white;
 	/* Maintenant si on fait met une taille : 500px/16px = 31,25rem tout s'armonise en conséquence donc on ne met plus d'autre px dans le reste du projet*/
 	font-size: 16px;
