@@ -61,3 +61,40 @@ Si on a ce genre de problème :
 ![image](https://github.com/WendyAlverde/tips-WendyAlverde/assets/148342924/1cc48e34-66cf-400a-a44d-bd743137bf9f)
 
 - ```npm rebuild```
+
+## Utiliser Directus
+
+Il faut se servir du MCD pour faire nos table dans Directus.
+
+### Many to Many
+
+Example avec les tables Recipes et Categories :
+- De la table Recipes, on créer un champ Many to Many
+- clé = categories
+- collection associée = Categories
+- Continuer en mode de création de champ avancé
+- Relation => champ correspondant
+- Créer un champ => cocher “Ajouter une relation Many to Many”
+- Nom du champ
+- Valider
+
+## Erreur ouverture de Directus
+
+Si on a une erreur dans ce genre là à l’ouverture de Directus : 
+
+![image](https://github.com/WendyAlverde/tips-WendyAlverde/assets/148342924/1199031e-a769-4fae-aef3-aba233e704b6)
+
+- Ouvrir inspecteur
+- Network
+- Application : 
+	- Local storage et on clear avec un clic droit
+	- Session storage et on clear avec un clic droit
+	- Cookies et on clear avec un clic droit
+
+Autre solution : 
+
+![image](https://github.com/WendyAlverde/tips-WendyAlverde/assets/148342924/ab059997-70f9-4ebb-89e1-5fbe54185ae7)
+
+- Cookie et données des sites
+- Gérer les données des sites sur l’appareil
+- Puis on clique sur la poubelle
