@@ -1,14 +1,19 @@
 # tips-WendyAlverde
-Des petites aides sur git, le code, Svelte, Directus et autres
 
-git.md = commandes git et explications
+Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
-projetSvelte.md = étape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
+brouillonMarcheASuivreJS.md = C'est un brouillon, il sera renommer et mis au propre. fichier qui aidera à savoir par quoi commencer quand on code en JS
 
-directus.md = commande dans le terminal pour installer Directus
+css.md = Pour le moment juste une définition de em et rem
+
+directus.md = Commande dans le terminal pour installer Directus et bug d'ouverture
 
 front.md = Aide pour savoir par où commencer le code, HTML  puis CSS
 
-marcheASuivre.md =  pour les git pull, git push et Pull Reaquest
+git.md = Commandes git et explications
 
-vercel.md = pour se rappeler des imports d'images en JS et se rappeler comment faire le déploiement correct du site
+projetSvelte.md = Etape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
+
+repoFront.md =  Pour les git pull, git push et Pull Request
+
+vercel.md = Imports d'images en JS et déploiement correct du site
