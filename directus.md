@@ -98,3 +98,19 @@ Autre solution :
 - Cookie et données des sites
 - Gérer les données des sites sur l’appareil
 - Puis on clique sur la poubelle
+
+## Repo de Directus
+
+### Créer repository de Directus :
+
+- Installer Directus, ouvrir VSC sur le dossier
+- Créer le repository sur GitHub
+- Quand on fait git init => git propose de mettre node_modules dans le .gitignore, j'ai mis ok et il git crée le dossier node_modules et le fichier .gitignore
+- J'ai mis le .env dans le gitignore, car je crois bien qu'il faut toujours l'y mettre, c'est plus sécuritaire
+
+### Quand on clone le projet avec Directus :
+
+- npm install
+- Ajouter le .env au dossier
+- npx directus start
+
