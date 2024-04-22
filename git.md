@@ -23,7 +23,7 @@ Créer un new repository sur GitHub, toutes les commandes sont données par GitH
 
 **git commit -m "Nom du commit"** = Validation des enregistrements des modifications
 
-**git push** = pousser le projet sur GitHub
+**git push** = pousser le projet sur GitHub (*Branche master ou main*)
 
 **git checkout -b nom-branche** = Créer une nouvelle branche et switch sur celle-ci (checkout = switcher entre les branches / -b = créer) 
 
@@ -33,6 +33,8 @@ Créer un new repository sur GitHub, toutes les commandes sont données par GitH
   - Rouge : branche distante
 
 **git push -u origin nom-branche** = Lorsqu'on pousse pour la première fois la branche
+
+**git push origin nom-branche** = Utilisation en tout temps, pour toute les branches
 
 **git diff** = Voir les modifications dans le terminal de tous les fichiers ou d'un seul en nommant après la commande le nom du fichier (**git diff nomFichier**)
 
