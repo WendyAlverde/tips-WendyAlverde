@@ -2,6 +2,8 @@
 
 ## Installer Node.js
 
+Utilisé par le CMS Node de Directus
+
 - Se mettre dans un dossier en dehors de notre repository
 
 Voir quel version nous avons de Node.js
@@ -22,7 +24,7 @@ Réessayer la commande pour vérifier que NVM soit installer
 
 ## Installer Node.js LTS
 
-Installer dernièere version LTS
+Installer dernière version LTS
 - ```nvm install --lts```
 
 Vérifier la version
