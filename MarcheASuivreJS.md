@@ -17,7 +17,7 @@ let recipes = []
   ``` const endpoint = import.meta.env.VITE_API_BASE_URL + "items/recipes ```
   
   ### 1.2 faire une requête HTTP au endpoint (on a à la chose à ouvrir)
-  C'est seulement pour le POST dont on a besoin du Header / Pour le GET on a seulement besoin de fetch(endpoint)
+  C'est seulement pour le POST dont on a besoin du Header / Pour le GET on a seulement besoin de fetch (endpoint)
  
   ``` fetch(endpoint)```
 
@@ -25,14 +25,14 @@ let recipes = []
 
   ### 2.1 récupéré la réponse de l'API et la convertir en objet
   ```
-    .then (jeson=> { recipes =json.data }) 
+    .then (json=> { recipes =json.data }) 
   ```
 
 ## Etape 3 Mettre les recettes dans la variable `recipes`
   On ecrase le tableau vide avec les données de l'API
 
   fetch est asynchrone donc il va faire le each avant de recevoir la réponse, donc :
-  Etape 4 : on créer une assync function
+  Etape 4 : on créer une async function
 
   ```
     async function get recipes() {
@@ -41,7 +41,6 @@ let recipes = []
     const json = await response.json()
     return json.data
   ```
-
 
 export let 
 
@@ -93,17 +92,30 @@ On crée le component RecipeCard
 <script>
     import {link} from "svelte-spa-router"
     export let recipe
+    // Defining the base URL for images using environment variables
+    const imageBaseUrl = import.meta.env.VITE_API_BASE_URL + 'assets/'
 </script>
   ```
 - La partie HTML
 ``` 
-<img class="recipes" src="{recipe.picture}" alt="première recette" />
-    <h3>{recipe.name}</h3> <!--recipe title-->
-    <p>{recipe.users}</p> <!--author name-->
-    {#each recipe.categories as category}
-        <p>{category.Categories_id.name}</p>
-    {/each}
-    <div class="wrapper">
-        <a class="button" href="/recipes" aria-label="Accéder à l'entièreté de la recette" use:link>Voir plus</a>
+<article class="framerecipes" role="article" aria-labelledby="recipe-heading-{recipe.id}">
+        <!-- Conditionally rendering the recipe picture if available, else using a fallback image -->
+    {#if recipe.picture}
+        <img class="recipes" src="{ imageBaseUrl + recipe.picture }" alt="Photo de la recette (à dynamiser)"/>
+    {:else}
+        <img class="recipes" src={foodCrisis} alt="">
+    {/if}
+    <!-- else : add picture  -->
+    <h3 id="recipe-heading-{recipe.id}">{recipe.name}</h3> <!--recipe title-->
+    <div class="infoRecipe">
+        <p>{recipe.users.first_name}</p> <!--author name-->
+        {#each recipe.categories as category}
+            <p>{category.Categories_id.name}</p>
+        {/each}
     </div>
+        <!-- Including the RecipeAccordeon component to display additional details about the recipe -->
+    <RecipeAccordeon accordeon={recipe} />
+    <!-- Including the SvgButton component for additional functionality -->
+    <SvgButton />
+</article>
 ```
