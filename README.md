@@ -12,6 +12,8 @@ front.md = Aide pour savoir par où commencer le code, HTML  puis CSS
 
 git.md = Commandes git et explications
 
+powershell.md = Utilisation du terminal Powershell avec WSL
+
 projetSvelte.md = Etape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
 
 repoFront.md =  Pour les git pull, git push et Pull Request
