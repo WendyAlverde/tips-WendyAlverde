@@ -35,6 +35,7 @@
 - Dans le dossier lib, créer les dossiers pages et components
 - Dans le dossier pages, créer nos Pages.sveltes
 - Dans le dossier components, créer les composants Header.svelte et Footer.svelte (*exemple : lib/components/Footer.svelte*)
+
 Si projet avec une base de données :
 - Créer le dossier .env.example
 - Créer le dossier .env avec l'adresse de la BDD (peut changer d'un pc à un autre)
