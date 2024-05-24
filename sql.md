@@ -15,4 +15,5 @@
 - FOREIGN KEY (brand_id) = qui garantit que chaque valeur de « brand_id » correspond à une valeur existante dans la colone « id » de la table « brands »
 - INDEX = Pour optimiser les requêtes de recherche
 - SET = Restaurer
-- START TRANSACTION; = nous permet de regrouper plusieurs opération SQL en une seule unité de travail. Les modifications ne seront pas pris en compte tant que la transaction ne sera pas validée avec COMMIT.
+- START TRANSACTION; = nous permet de regrouper plusieurs opération SQL en une seule unité de travail. Les modifications ne seront pas prises en compte tant que la transaction ne sera pas validée avec COMMIT.
+- INSERT TO = Ajoute de nouveaux enregistrements dans la table
