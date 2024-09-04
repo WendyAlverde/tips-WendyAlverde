@@ -10,6 +10,8 @@ https://learn.microsoft.com/fr-fr/windows/wsl/install
 - ```wsl --install```
 
 - Il faut parfois redémarer le pc
+- Ouvrir l'**invite de commande**
+- lancer la commande : ```wsl``` etattendre un moment
 - Mettre son nom d'utilisateur
 - Mettre son mot de passe
 - Fermer l'invite de commande et le rouvrir
