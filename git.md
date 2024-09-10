@@ -27,6 +27,10 @@ Créer un new repository sur GitHub, toutes les commandes sont données par GitH
 
 **git checkout -b nom-branche** = Créer une nouvelle branche et switch sur celle-ci (checkout = switcher entre les branches / -b = créer) 
 
+**git checkout nom-branche** = Permet d'aller sur la branche que l'on souhaite
+
+**git branch nom-branche** = Permet de créer une nouvelle branche (sans être switch dessus)
+
 **git branch -a** = Voir toutes les branches
   - Vert : branche locale sur laquelle on se trouve
   - Blanche : branche locale
