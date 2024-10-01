@@ -37,12 +37,12 @@
 - Dans le dossier components, créer les composants Header.svelte et Footer.svelte (*exemple : lib/components/Footer.svelte*)
 
 Si projet avec une base de données :
-- Créer le dossier .env.example
-- Créer le dossier .env avec l'adresse de la BDD (peut changer d'un pc à un autre)
+- Créer le fichier .env.example
+- Créer le fichier .env avec l'adresse de la BDD (peut changer d'un pc à un autre)
 
 ## Intégration HTML
 
-- Dans App.svelte, faire les imports des pages ayant besoin des routes (Header.svelte et Footer.svelte) et de de Router dans une balise script :
+- Dans App.svelte, faire les imports des pages ayant besoin des routes (Header.svelte et Footer.svelte) et de Router dans une balise script :
 ```
 <script>
   import Router from 'svelte-spa-router'
