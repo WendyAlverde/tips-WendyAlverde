@@ -9,40 +9,41 @@ On a fait la boucle sur les articles dans le HTML
 ## Etape 0 : Déclarer la variable `recipes`
 let recipes = []
 
-##  Etape 1 appeler l'API Directus
+##  Etape 1 Appeler l'API Directus
 
   ### 1.1 récupérer l'URL du endpoint (on a la clé)
   Il faut prendre la fin du endpoint
   
   ``` const endpoint = import.meta.env.VITE_API_BASE_URL + "items/recipes ```
   
-  ### 1.2 faire une requête HTTP au endpoint (on a à la chose à ouvrir)
-  C'est seulement pour le POST dont on a besoin du Header / Pour le GET on a seulement besoin de fetch (endpoint)
+  ### 1.2 Faire une requête HTTP au endpoint
+  - Pour le POST on a besoin du Header
+  - Pour le GET on a besoin de fetch (endpoint)
  
   ``` fetch(endpoint)```
 
-## Etape 2 Récupéré les recette à partir de la réponse de l'API
+## Etape 2 Récupéré les recettes à partir de la réponse de l'API
 
-  ### 2.1 récupéré la réponse de l'API et la convertir en objet
+  ### 2.1 Récupéré la réponse de l'API et la convertir en objet
   ```
     .then (json=> { recipes =json.data }) 
   ```
 
 ## Etape 3 Mettre les recettes dans la variable `recipes`
-  On ecrase le tableau vide avec les données de l'API
 
-  fetch est asynchrone donc il va faire le each avant de recevoir la réponse, donc :
-  Etape 4 : on créer une async function
+  On ecrase le tableau vide avec les données de l'API.
+  
+  Fetch est asynchrone donc il va faire le each avant de recevoir la réponse, donc :
+  
+## Etape 4 : on créer une async function
 
   ```
     async function get recipes() {
     const endpoint = import.meta.env.VITE_API_BASE_URL + "items/recipes
-    const response = await faetch(endpoint)
+    const response = await fetch(endpoint)
     const json = await response.json()
     return json.data
   ```
-
-export let 
 
 ## Final 
 Fichier Recipes.svelte
@@ -73,7 +74,6 @@ Fichier Recipes.svelte
 
     // 4. mettre les recettes dans la variable recipes
     const recipes = getRecipes()
-
 </script>
 ```
 - La partie HTML
@@ -89,12 +89,12 @@ Fichier Recipes.svelte
 On crée le component RecipeCard 
 - La partie script
   ```
-<script>
+  <script>
     import {link} from "svelte-spa-router"
     export let recipe
     // Defining the base URL for images using environment variables
     const imageBaseUrl = import.meta.env.VITE_API_BASE_URL + 'assets/'
-</script>
+  </script>
   ```
 - La partie HTML
 ``` 
