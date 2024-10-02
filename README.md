@@ -4,24 +4,26 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 ## Les fichiers
 
-**DeployDirectus.md** = Essai de déploiement de Directus, j'ai  placé mes essai ici pour le moment
+**css** = Pour le moment juste une définition de em et rem
 
-**MarcheASuivreJS.md** = C'est un brouillon, il sera renommer et mis au propre. fichier qui aidera à savoir par quoi commencer quand on code en JS
+**debutProjetFront** = Aide pour savoir par où commencer le code, HTML puis CSS
 
-**css.md** = Pour le moment juste une définition de em et rem
+**deployDirectus** = Essai de déploiement de Directus, j'ai placé mes essais ici pour le moment
 
-**directus.md** = Commande dans le terminal pour installer Directus et bug d'ouverture
+**git** = Commandes git et explications
 
-**front.md** = Aide pour savoir par où commencer le code, HTML  puis CSS
+**installationDirectus** = Commande dans le terminal pour installer Directus et bug d'ouverture
 
-**git.md** = Commandes git et explications
+**installationSvelte** = Etape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
 
-**powershell.md** = Utilisation du terminal Powershell avec WSL
+**performanceSite** = Minify, convertir des images, sémantique, etc
 
-**projetSvelte.md** = Etape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
+**powershell-wsl** = Utilisation du terminal Powershell avec WSL
 
-**repoFront.md** =  Pour les git pull, git push et Pull Request
+**premiereFoisSurRepo** =  Pour les git pull, les branches, les git push et Pull Request
 
-**sql.md** = Des petites notes prisent en faisant le dossier professionnel
+**scriptSvelteBoucle** = Aide à savoir par quoi commencer quand on boucle en Svelte
 
-**vercel.md** = Imports d'images en JS et déploiement correct du site
+**sql** = Des petites notes prisent en faisant le dossier professionnel
+
+**vercel** = Imports d'images en JS et déploiement correct du site
