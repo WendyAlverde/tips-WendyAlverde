@@ -1,6 +1,6 @@
 # Marche à suivre pour le front
 
-- "mobile first" = On commence toujours par coder en mode téléphone, puis avec le CSS on fera le responsive
+- "mobile first" ? = On commence toujours par coder la plateforme qui sera le plus le plus utiliser, puis avec le CSS on fera le responsive
 - On code la partie HTML
 - Puis on code la partie CSS / SCSS de la partie HTML
 
@@ -12,13 +12,13 @@
 
 On utilise un maximum de balise différente aevc un minimum de div pour avoir un site accessible et avoir un meilleur référencement pour le SEO.
 
-On commence par la balise HTML, qui dans notre cas se trouve dans :
-- ```index.html```, fichier qu'on ne touche pas sauf pour :
-    - Changer le svg (logo que l'on voit sur l'onglet de notre site)
-    - Changer le title (titre de notre site)
-    - Changer la langue  (langue la plus utiliser sur notre site)
+On commence par la balise HTML :
 
-Étant donnée qu'avec Svelte nous avons des components pour les partie de code qui seront réutilisés dans plusieurs page. Nous pouvons commencer par coder le ```Header.svelte``` et le ```Footer.svelte``` : 
+- Changer le svg (logo que l'on voit sur l'onglet de notre site)
+- Changer le title (titre de notre site)
+- Changer la langue (langue la plus utiliser sur notre site)
+
+Étant donnée qu'avec Svelte nous avons des components pour les parties de code qui seront réutilisés dans plusieurs page. Nous pouvons commencer par coder le ```Header.svelte``` et le ```Footer.svelte``` : 
 
 *Exemple de Header :*
 ```
@@ -60,7 +60,7 @@ Dans notre CSS on commence par mettre :
     text-decoration: none; Pour que les liens ne soit plus souligner
     }
   ```
-  - le sélecteur de pseudo-classe ```:root``` même chose que mettre ```html``` :
+  - le sélecteur de pseudo-classe ```:root``` = ```html``` :
   ```
   :root {
   background-color: white;
@@ -73,6 +73,11 @@ Dans notre CSS on commence par mettre :
   ```
 - Ensuite on fait des parties de CSS 
   - On commente chaque partie : Partie Header, partie Home, partie About us etc
+    
+Si on est sur un projet Svelte, on peut faire le CSS utile seulement à la page, dans le fichier de celle-ci, en dessous du HTML dans des balises ```style```.
+
+Si on souhaite utiliser du SCSS on met ```<style lang="scss">```
+
 - On fait en sorte de ne pas se répéter, on peut donc écrire notre CSS de cette manière :
 ```
 h1, h2, h3, h4, h5, h6 {
