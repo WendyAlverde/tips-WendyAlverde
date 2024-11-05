@@ -26,4 +26,6 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 **sql** = Des petites notes prisent en faisant le dossier professionnel
 
+**styles** = Quelques conseils pour modifier le style par défaut des navigateurs
+
 **vercel** = Imports d'images en JS et déploiement correct du site
