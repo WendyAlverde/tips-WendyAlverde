@@ -3,9 +3,10 @@
 ## Styliser une checkbox
 ```
   input[type=checkbox] {
-      -webkit-appearance: none; /* Retire le style par défaut du navigateur */
-      -moz-appearance: none; /* Retire le style par défaut du navigateur */
-      -ms-appearance: none; /* Retire le style par défaut du navigateur */
+      appearance: none;          // Retire le style par défaut du navigateur
+      -webkit-appearance: none;   // Pour Safari
+      -moz-appearance: none;      // Pour Firefox
+      -ms-appearance: none;       // Pour Internet Explorer et ancien Edge
       height: 1rem; /* Ajuste la hauteur de la nouvelle checkbox */
       width: 1rem; /* Ajuste la largeur de la nouvelle checkbox */
       background-color: var(--filters);
@@ -24,4 +25,24 @@
       opacity: 1; /* Si tu veux une opacité pleine */
       cursor: pointer; /* Montre que c'est cliquable */
   }
+```
+
+## Styliser la flèche d'un dropdown
+```
+select {
+    width: 6rem;
+    border: none;
+    background-color: var(--background);
+    font-family: 'enjoyAndRelax';
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    // Changer la flèche du dropdown
+    appearance: none;          // Retire le style par défaut du navigateur
+    -webkit-appearance: none;   // Pour Safari
+    -moz-appearance: none;      // Pour Firefox
+    -ms-appearance: none;       // Pour Internet Explorer et ancien Edge
+    background: url('../../assets/logo/select-bleu.png') no-repeat right;
+    background-size: 0.8rem;
+}   
 ```
