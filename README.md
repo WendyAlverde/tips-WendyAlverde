@@ -14,7 +14,9 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 **installationDirectus** = Commande dans le terminal pour installer Directus et bug d'ouverture
 
-**installationSvelte** = Etape à réaliser pour installer Svelte et commencer un avec un projet propre et fonctionnel
+**installationReact** = Étape à réaliser pour installer REACT et commencer avec un projet propre et fonctionnel
+
+**installationSvelte** = Étape à réaliser pour installer Svelte et commencer avec un projet propre et fonctionnel
 
 **performanceSite** = Minify, convertir des images, sémantique, etc
 
