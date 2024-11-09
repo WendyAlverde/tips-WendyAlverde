@@ -1,9 +1,5 @@
 # Les étapes à réaliser pour un nouveau projet Svelte
 
-- Création dossier du projet
-- Ouvrir VSC
-- Ouvrir un nouveau terminal
-
 ## Créer un nouveau repository
 
 - Aller sur le profil GitHub
@@ -24,7 +20,7 @@
 ## Vider les dossiers et fichiers inutiles
 
 -	Vider le contenu de App.svelte
--	Renommer le fichier app.css en app.scss et le vider 
+-	Renommer le fichier app.css en app.scss
 -	Changer la route de l’import dans le fichier main.js (app.css en app.scss)
 -	Supprimer le fichier Counter.svelte
 -	Dans le fichier jsconfig.json, à la ligne ```"checkJs" : true,``` remplacer par ```"checkJs": false,```
