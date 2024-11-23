@@ -78,5 +78,11 @@ textarea {
     &::-webkit-scrollbar-track { 
         background-color: var(--filters);
     }
+
+    // Cible uniquement le coin de redimensionnement visible
+    &::-webkit-resizer {
+        background-color: var(--fringe-filter); /* Change la couleur */
+        border-radius: 0.1rem; /* Donne une forme circulaire */
+    }
 }
 ```
