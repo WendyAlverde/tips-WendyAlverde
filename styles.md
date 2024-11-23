@@ -46,3 +46,37 @@ select {
     background-size: 0.8rem;
 }   
 ```
+
+## Styliser la scrollbar
+```
+textarea {
+    min-height: 1.8rem;
+    max-height: 12rem;
+    min-width: 10rem;
+    max-width: 15rem;
+    border: none;
+    background-color: #cdf5fa83;
+
+    /* Personnalisation de la scrollbar */
+    //Cible la barre de défilement.
+    &::-webkit-scrollbar {
+        width: 0.4rem; /* Largeur de la barre de défilement */
+    }
+
+    //Cible la poignée (partie qu'on déplace pour faire défiler)
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--fringe-filter);
+        border-radius: 0.2rem;
+        cursor: grab;
+    }
+        
+    &::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+    }
+
+    //Cible la piste sur laquelle la poignée se déplace
+    &::-webkit-scrollbar-track { 
+        background-color: var(--filters);
+    }
+}
+```
