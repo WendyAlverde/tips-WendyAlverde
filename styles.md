@@ -12,6 +12,12 @@
       background-color: var(--filters);
       cursor: pointer; /* Montre que c'est cliquable */
   }
+
+  input[type=checkbox]:checked {
+      background: url('../../assets/logo/signe-de-la-croix-bleuBgFilters.png') no-repeat center center;
+      background-size: contain;
+      opacity: 1;
+  }
 ```
 
 ## Styliser la croix de la barre de recherche
