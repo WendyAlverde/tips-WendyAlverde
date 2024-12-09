@@ -4,6 +4,8 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 ## Les fichiers
 
+**accessibilite** = Aide sur l'accessibilité d'un site
+
 **css** = Pour le moment juste une définition de em et rem
 
 **debutProjetFront** = Aide pour savoir par où commencer le code, HTML puis CSS
