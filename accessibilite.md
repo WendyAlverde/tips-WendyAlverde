@@ -7,5 +7,6 @@ Ils aident les technologies d'assistance à comprendre que cette zone est priori
 
 - role="dialog" : Indique que l'élément est une boîte de dialogue.
 - aria-modal="true" : Signale que le contenu en dehors de ce dialogue ne doit pas être accessible.
+*Ces attributs ne fonctionnent pas sur un bouton*
 
 ex : utilisation pour un burger / une modal
