@@ -31,6 +31,8 @@ Créer un new repository sur GitHub, toutes les commandes sont données par GitH
 
 **git branch nom-branche** = Permet de créer une nouvelle branche (sans être switch dessus)
 
+**git branch -d nom-branche** = Permet de supprimer une branche, ou -D pour l'obliger à la supprimer
+
 **git branch -a** = Voir toutes les branches
   - Vert : branche locale sur laquelle on se trouve
   - Blanche : branche locale
