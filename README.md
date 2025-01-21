@@ -26,8 +26,12 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 **scriptSvelteBoucle** = Aide à savoir par quoi commencer quand on boucle en Svelte
 
+**serveurLocal** = Accéder au serveur local sur le téléphone
+
 **sql** = Des petites notes prisent en faisant le dossier professionnel
 
 **styles** = Quelques conseils pour modifier le style par défaut des navigateurs
+
+**svelte** = Rappel d'utilisation de js dans Svelte
 
 **vercel** = Imports d'images en JS et déploiement correct du site
