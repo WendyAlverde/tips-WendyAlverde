@@ -34,7 +34,7 @@ function formatPhoneNumber() {
  
 L'objectif est de formater une chaîne en ajoutant un point après chaque paire de chiffres, sauf à la fin si un seul chiffre reste.
 
-### Email
+### Email version 1
 
 ```Svelte
 let email = '';
@@ -52,7 +52,7 @@ function validateEmail() {
 #### /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 - ```^``` : Ancre de début qui signifie que la correspondance doit commencer au tout début de la chaîne.
-- ```[^\s@]+``` : Une séquence d'un ou plusieurs caractères qui ne sont ni des espaces blancs ni le caractère @
+- ```[^\s@]+``` : Une séquence d'un ou plusieurs caractères qui ne sont ni des espaces blancs ni le caractère @.
   - ```[ ]``` : Définit une classe de caractères, c'est-à-dire un ensemble de caractères possibles.
   - ```^``` (dans ```[^]```) :    : Inverse la classe, indiquant les caractères interdits.
   - ```\s``` : Représente les espaces blancs (espace, tabulation, saut de ligne).
@@ -71,3 +71,27 @@ function validateEmail() {
 #### disabled={!!errorMessage}
 
 - Le bouton **Envoyer** est désactivé tant que l'eamil n'est pas valide
+
+### Email version 2
+
+```Svelte
+let email = '';
+let errorMessage = '';
+
+function validateEmail() {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(email)) {
+        errorMessage = "Veuillez entrer une adresse email valide.";
+    } else {
+        errorMessage = '';
+    }
+}
+```
+- ```[a-zA-Z0-9._%+-]+```  (avant le ```@```) :
+  - Accepte uniquement des lettres (a-z, A-Z), des chiffres (0-9), et les caractères ., _, %, +, -.
+  - N'autorise pas d'espaces ou de caractères spéciaux comme @, ce qui empêche un @ avant l'emplacement prévu.
+- ```@[a-zA-Z0-9.-]+``` (après le ```@```) : Accepte un seul @ suivi de caractères valides pour les noms de domaine (lettres, chiffres, tirets, et points).
+- ```\.[a-zA-Z]{2,}$``` (fin de l'adresse) : Vérifie que l'adresse se termine par un TLD (comme .com, .org, .fr), avec au moins 2 lettres après le dernier point.
+
+
