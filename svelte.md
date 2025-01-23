@@ -94,4 +94,97 @@ function validateEmail() {
 - ```@[a-zA-Z0-9.-]+``` (après le ```@```) : Accepte un seul @ suivi de caractères valides pour les noms de domaine (lettres, chiffres, tirets, et points).
 - ```\.[a-zA-Z]{2,}$``` (fin de l'adresse) : Vérifie que l'adresse se termine par un TLD (comme .com, .org, .fr), avec au moins 2 lettres après le dernier point.
 
+## Accordéon
 
+### Sur la page contenant l'accordéon
+
+La section, le titre puis l'appel du Composant
+```Svelte
+<script>
+    // Import composants
+    import Accordion from '../components/Accordion.svelte';
+    export let title = "FAQ";
+</script>
+
+<section class="faq">
+    <h2>{title}</h2>
+    <Accordion />
+</section>
+```
+
+### Sur le Composant Accordeon
+
+```Svelte
+<script>
+    const questions = [
+        // Contenu sous forme de liste
+        {
+            title: 'Pourquoi faire appel à un expert en automobile ?',
+            content: [
+                'L’expertise automobile répond à plusieurs besoins techniques et pratiques :',
+                {
+                    type: 'list',
+                    items: [
+                        'A : L’expert.',
+                        'Z : Cela.',
+                        'E : Véhicules.',
+                        'R : Garantir.',
+                    ]
+                }
+            ]
+        },
+        // Contenu sous forme de paragraphe
+        {
+            title: "Je viens d'acquérir un véhicule d'occasion, il est affecté d'avaries, quels sont mes recours ?",
+            content: 'En cas ...'
+        },
+
+    let openIndex = null;
+    
+    const toggleAccordion = (index) => {
+        openIndex = openIndex === index ? null : index; // Ferme si la même section est cliquée  
+    };
+
+    // Accessibilité
+    const handleKeydown = (event, index) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        toggleAccordion(index);
+        }
+    };
+</script>
+
+<div class="accordeon" >
+    {#each questions as question, index}
+        <!-- J'ai ajouté l'événement on:click sur cette div afin de permettre de cliquer n'importe où dans l'accordéon pour le fermer.  -->
+        <!-- Si cela pose problème, vous pouvez déplacer l'événement sur la div située en dessous. -->
+        <!-- La navigation clavier est prise en charge avec tabindex="0" et on:keydown. -->
+        <div class="accordeon-item" role="button" tabindex="0" aria-expanded={openIndex === index ? 'true' : 'false'} aria-controls={`panel-${index}`} on:keydown={(e) => handleKeydown(e, index)} on:click={() => toggleAccordion(index)}>
+            <div class="accordeon-item-header"> 
+                <img src={arrow} aria-hidden="true" class="arrow" class:down={openIndex === index} alt="">
+                <h3>{question.title}</h3>
+            </div>
+
+            <!-- Affiche le contenu de l'accordéon uniquement si celui-ci est ouvert. -->
+            {#if openIndex === index}
+                <div id={`panel-${index}`} role="region" class="accordeon-ouvert">
+                    <!-- Parcourt les éléments du contenu de la question. -->
+                    {#each question.content as contentItem}
+                        <!-- Si l'élément est une simple chaîne de caractères, l'affiche dans un paragraphe. -->
+                        {#if typeof contentItem === 'string'}
+                            <p>{contentItem}</p>
+                        <!-- Si l'élément est une liste, affiche ses éléments dans une liste non ordonnée. -->
+                        {:else if contentItem.type === 'list'}
+                            <ul>
+                                {#each contentItem.items as item}
+                                    <!-- Utilisation de '{@html}' pour permettre l'injection de contenu HTML sécurisé. -->
+                                    <li>{@html item}</li>
+                                {/each}
+                            </ul>
+                        {/if}
+                    {/each}
+                </div>
+            {/if}
+        </div>
+    {/each}
+</div>
+```
