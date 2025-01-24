@@ -159,29 +159,32 @@ La section, le titre puis l'appel du Composant
         <!-- Si cela pose problème, vous pouvez déplacer l'événement sur la div située en dessous. -->
         <!-- La navigation clavier est prise en charge avec tabindex="0" et on:keydown. -->
         <div class="accordeon-item" role="button" tabindex="0" aria-expanded={openIndex === index ? 'true' : 'false'} aria-controls={`panel-${index}`} on:keydown={(e) => handleKeydown(e, index)} on:click={() => toggleAccordion(index)}>
-            <div class="accordeon-item-header"> 
+            <div class="accordeon-item-header">
                 <img src={arrow} aria-hidden="true" class="arrow" class:down={openIndex === index} alt="">
                 <h3>{question.title}</h3>
             </div>
 
-            <!-- Affiche le contenu de l'accordéon uniquement si celui-ci est ouvert. -->
             {#if openIndex === index}
-                <div id={`panel-${index}`} role="region" class="accordeon-ouvert">
-                    <!-- Parcourt les éléments du contenu de la question. -->
-                    {#each question.content as contentItem}
-                        <!-- Si l'élément est une simple chaîne de caractères, l'affiche dans un paragraphe. -->
-                        {#if typeof contentItem === 'string'}
-                            <p>{contentItem}</p>
-                        <!-- Si l'élément est une liste, affiche ses éléments dans une liste non ordonnée. -->
-                        {:else if contentItem.type === 'list'}
-                            <ul>
-                                {#each contentItem.items as item}
-                                    <!-- Utilisation de '{@html}' pour permettre l'injection de contenu HTML sécurisé. -->
-                                    <li>{@html item}</li>
-                                {/each}
-                            </ul>
-                        {/if}
-                    {/each}
+                <div id={`panel-${index}`} role="region" class="accordeon-item-ouvert">
+                    <!-- Si l'élément est une simple chaîne de caractères, l'affiche dans un paragraphe -->
+                    {#if typeof question.content === 'string'}
+                        <p>{question.content}</p>
+                    <!-- Si l'élément est un tableau, on boucle dessus -->
+                    {:else if Array.isArray(question.content)}
+                        {#each question.content as contentItem}
+                            <!-- Si l'élément est une chaîne de caractères, l'affiche dans un paragraphe -->
+                            {#if typeof contentItem === 'string'}
+                                <p>{contentItem}</p>
+                            <!-- Si l'élément est une liste, on l'affiche dans une liste non ordonnée -->
+                            {:else if contentItem.type === 'list'}
+                                <ul>
+                                    {#each contentItem.items as item}
+                                        <li>{@html item}</li>
+                                    {/each}
+                                </ul>
+                            {/if}
+                        {/each}
+                    {/if}
                 </div>
             {/if}
         </div>
