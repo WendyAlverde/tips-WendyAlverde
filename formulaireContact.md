@@ -135,7 +135,8 @@ let demande = "information";
 
 - Aller dans le dossier de Xampp
 - Puis dans le dossier htdocs
-- Créer un fichier send-mail.php
+- Créer un dossier du nom du projet
+- Dans ce dossier du nom de notre projet, créer un fichier send-mail.php
 - Dans XAMPP puis Config  puis php.ini  :
   -  ```SMTP=smtp.gmail.com``` : si utilisation de gmail
   -  ```smtp_port=587``` : pour gmail
@@ -143,9 +144,11 @@ let demande = "information";
 
 ### Télécharger composer PHP
 
--   sudo apt install composer
--   composer --version
+Dans le terminal mettre les commandes :
+-   ```sudo apt install composer``` : Installation de composer
+-   ```composer --version``` : Véfifier la version
 
 ### Télécharger PHPMailer
 
--  composer require phpmailer/phpmailer
+- Se mettre dans le dossier de notre projet dans XAMPP
+- ```composer require phpmailer/phpmailer``` : Installation de PHPMailer
