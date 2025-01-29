@@ -152,3 +152,15 @@ Dans le terminal mettre les commandes :
 
 - Se mettre dans le dossier de notre projet dans XAMPP
 - ```composer require phpmailer/phpmailer``` : Installation de PHPMailer
+
+### L'entreprise ou la personne qui dois recevoir les mail du formulaire
+
+- Se connecter au compte mail
+- Paramètre de  sécurité
+- Activer l'authentification à deux facteurs
+- Dans la barre de recherche : Mots de passe d'application
+- Dans le menu déroulant séléctionner : Autre (nom personnalisé)
+- Donner un nom comme "PHPMailer" ou "Serveur local"
+- On reçoit un mot de passe à coller dans le send-mail.php
+- 
+Le mot de passe d'application permet de se connecter à ton compte Google sans exposer ton mot de passe réel. C'est une mesure de sécurité supplémentaire, qui empêche des applications non sécurisées ou non autorisées d'accéder à ton compte Gmail directement.
