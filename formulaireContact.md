@@ -1,5 +1,7 @@
 # Formulaire  de contact avec Svelte
 
+ 1. GMAIL
+    
 ## Dans le script 
 
 ### Définir nos variables
@@ -164,3 +166,24 @@ Dans le terminal mettre les commandes :
 - On reçoit un mot de passe à coller dans le send-mail.php
 - 
 Le mot de passe d'application permet de se connecter à ton compte Google sans exposer ton mot de passe réel. C'est une mesure de sécurité supplémentaire, qui empêche des applications non sécurisées ou non autorisées d'accéder à ton compte Gmail directement.
+
+2. OUTLOOK
+
+## Dans le script 
+
+### Définir nos variables
+
+```svelte
+let demande, urgence, localisation, nom, tel, email, commentaire, successMessage, errorMessage;
+
+const sendForm = async () => {
+    const formData = {
+        demande,
+        urgence,
+        localisation,
+        nom,
+        tel,
+        email,
+        commentaire
+    };
+```
