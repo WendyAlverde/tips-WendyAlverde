@@ -59,6 +59,15 @@ Si on préfère garder un historique,  il faut retirer le fast-forward avec --no
   -  Une page d'écriture s'ouvre : ctrl + X, N *(Je n'ai pas réussi à changer le nom du commit)*
   -  La branche front existe toujours, la branche dev obtient tous les changements et les commit de la branche front
 
+## Moins utilisé mais très pratique
+
+**git checkout -- .** : Si tu veux annuler toutes tes modifications locales
+
+**git restore .** : Version plus moderne pour annuler toutes tes modifications locales
+
+*Cela remet les fichiers dans leur dernier état connu du dernier commit.*
+
+**git reset .** : Si tu as ajouté des fichiers avec git add, retire-les de l'index
 
 
     
