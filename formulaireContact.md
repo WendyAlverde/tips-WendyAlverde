@@ -24,24 +24,38 @@ let demande = "information";
 ### Définir nos validations, de mail, téléphone et texte
 
 ```svelte
-    // téléphone
-    function formatPhoneNumber() {
-        let value = telInput.value.replace(/\D/g, ''); // Supprime tout les caractères numériques
-        if (value.length > 10) value = value.slice(0, 10); // Limite la longueur du numéro à 10 chiffres
-        tel = value.replace(/(\d{2})(?=\d)/g, '$1.'); // Applique le format souhaité à savoir un point tout les deux chiffres
+    // Téléphone
+    let errorMessageTel = '';
+
+    function formatPhoneNumber(event) {
+        let value = event.target.value.replace(/\D/g, ''); // Supprime tout sauf les chiffres
+        if (value.length > 10) value = value.slice(0, 10); // Limite à 10 chiffres
+
+        // Applique le format : "01.23.45.67.89"
+        value = value.replace(/(\d{2})(?=\d)/g, '$1.');
+
+        // Met à jour l'input via event.target.value (évite les bugs avec bind:value)
+        event.target.value = value;
+        tel = value; // Met à jour la variable Svelte
     }
 
-    // email
+    function validatePhone() {
+        const phoneRegex = /^0[1-9](\.[0-9]{2}){4}$/;
+        errorMessageTel = phoneRegex.test(tel) ? "" : "Le numéro doit être au format 01.02.03.04.05";
+    }
+
+    // Email
+    let errorMessageMail = '';
+    
     function validateEmail() {
         // vérifie la validité d'une adresse email en respectant les règles suivantes :
         // - La partie avant le @ peut contenir des lettres, chiffres et certains caractères spéciaux (., _, %, +, -).
         // - Un seul @ est autorisé, suivi par le nom de domaine (lettres, chiffres, tirets, et points).
         // - L'email doit se terminer par un TLD valide (ex. .com, .fr) contenant au moins 2 lettres.
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailRegex.test(email)) {
-        errorMessage = "Veuillez entrer une adresse email valide : exemple@gmail.com";
+        if (email && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+            errorMessageMail = "Veuillez entrer une adresse email valide : exemple@gmail.com";
         } else {
-        errorMessage = '';
+            errorMessageMail = '';  // Si l'email est valide ou non renseigné, on efface l'erreur
         }
     }
 
@@ -60,7 +74,7 @@ let demande = "information";
     });
 ```
 
-### La function du formulaire de contact
+### La fonction du formulaire de contact
 
 ```svelte
     async function sendForm(event) {
@@ -169,21 +183,114 @@ Le mot de passe d'application permet de se connecter à ton compte Google sans e
 
 2. OUTLOOK
 
+## Dans le terminal de notre projet
+
+Faire la commande : ```npm install emailjs-com```
+
 ## Dans le script 
+
+```svelte
+import emailjs from "emailjs-com"
+```
 
 ### Définir nos variables
 
 ```svelte
-let demande, urgence, localisation, nom, tel, email, commentaire, successMessage, errorMessage;
+let nom = "";
+    let email = "";
+    let tel = "";
+    let demande = "information";
+    let urgence = "";
+    let localisation = "Montpellier";
+    let commentaire = "";
+    let errorMessage = "";
+    let errorMessageForm = '';
+    let errorMessageTelMail = '';
+```
 
-const sendForm = async () => {
-    const formData = {
-        demande,
-        urgence,
-        localisation,
-        nom,
-        tel,
-        email,
-        commentaire
-    };
+### La fonction du formulaire de contact
+
+```svelte
+function envoyerFormulaire() {
+        
+      if (!email && !tel) {
+          errorMessageTelMail = "Veuillez entrer au moins un email ou un numéro de téléphone.";
+          console.log(errorMessageTelMail);
+          return;
+      } else {
+          errorMessageTelMail = ''; // Si la condition est remplie, on vide le message d'erreur
+      }
+      
+      // Vérification du format du téléphone avant l'envoi
+      if (tel && !/^0[1-9](\.[0-9]{2}){4}$/.test(tel)) {
+          errorMessage = "Le numéro de téléphone doit être au format 01.02.03.04.05";
+          return;
+      }
+   
+      // Si l'email est renseigné, on vérifie sa validité
+      if (email && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+          errorMessageMail = "Veuillez entrer une adresse email valide.";
+          return;
+      } else {
+          errorMessageMail = '';  // Réinitialise le message d'erreur pour l'email
+      }
+   
+      // Informations à envoyer
+      let templateParams = {
+          to_email: "ptiscarabe2036@msn.com", // Remplacez par votre e-mail
+          nom,
+          email,
+          tel,
+          demande,
+          urgence,
+          localisation,
+          commentaire
+      };
+   
+      // Envoi via EmailJS
+      emailjs
+          .send(
+              "service_wjuacsr",
+              "template_4bt7327",
+              templateParams,
+              "Fd61aLMeIyHeGoWgm"
+          )
+          .then(
+              function (response) {
+                  alert("Formulaire envoyé avec succès !");
+                  console.log("SUCCESS!", response.status, response.text);
+              },
+              function (error) {
+                  alert("Échec de l'envoi.");
+                  console.log("FAILED...", error);
+              }
+          );
+    }
+```
+
+### Mettre le on:submit dans le form
+
+``` Svelte
+  <form on:submit|preventDefault={envoyerFormulaire}>
+```
+
+### Mettre les message d'erreur dans le form
+
+``` Svelte
+  {#if errorMessageTel}
+      <p style="color: #CF1F31; font-size: 0.8rem; padding-bottom: 0.5rem;">{errorMessageTel}</p>
+  {/if}
+```
+``` Svelte
+  {#if errorMessageMail}
+      <p style="color: #CF1F31; font-size: 0.8rem; padding-bottom: 0.5rem;">{errorMessageMail}</p>
+  {/if}
+```
+``` Svelte
+ {#if errorMessageTelMail}
+     <p style="color: #CF1F31; font-size: 0.8rem; padding-bottom: 0.5rem;">{errorMessageTelMail}</p>
+ {/if}
+```
+``` Svelte
+ <button type="submit" disabled={!!errorMessageForm}>Envoyer</button>
 ```
