@@ -69,6 +69,9 @@ Si on préfère garder un historique,  il faut retirer le fast-forward avec --no
 
 **git reset .** : Si tu as ajouté des fichiers avec git add, retire-les de l'index
 
+Si il y a oublie de pull avant de travailler sur la branche :
+**git pull origin nom de la branche --rebase** : Récupérer les modifications du dépôt distant avant de pouvoir pousser les notres
+
 
     
 *J'ai pris les infos sur les cours O'clock, sur GitHUb et sur la chaîne "Bande de Codeurs" sur Youtube, il a fait deux, très bonnes vidéos explicatives*
