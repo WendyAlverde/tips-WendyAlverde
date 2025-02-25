@@ -71,3 +71,24 @@ Si le type d'enregistrement CNAME n'existe pas (sinon faite modifier l'enregistr
   - Aller dans les settings
   - Dans la section domains, ajouter le domaine www.nom-domaine.com, si il n'y est pas
 
+## Le référencement (SEO)
+
+### Après déploiement ou si l'entreprise existait déjà avant
+
+- Indexation avec Google Search Console, quelques heures à quelques jours
+- Google My Business (GMB) : Google My Business permet aux entreprises d’apparaître sur Google Maps et dans les résultats locaux de Google, offrant une meilleure visibilité et facilitant l’accès aux clients.
+- Ajouter des backlinks : Les backlinks sont des liens provenant d’autres sites web pointant vers le nôtre. Ils jouent un rôle essentiel en SEO en renforçant notre autorité et notre visibilité sur les moteurs de recherche. (exemple : si un blog ou un média parle de l'entreprise et met un lien vers le site) 
+
+### Format et taille d'image pour les cartes des réseaux sociaux
+
+- Format recommandé : jpeg ou png
+- Ratio 1.91:1(paysage) ou 1:1(carré pour Instagram
+ 
+| Réseau            | Taille recommandée  |
+|------------------|-------------------|
+| **Facebook & LinkedIn** | 1200 x 630 px  |
+| **Twitter (X) Card large** | 1200 x 675 px  |
+| **Instagram**    | 1080 x 1080 px (carré) |
+| **WhatsApp**     | 1200 x 630 px  |
+
+- Sinon mettre une seule image universelle : 1200 x 630 px est le meilleur compromis
