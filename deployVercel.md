@@ -1,5 +1,7 @@
 # Déploiement avec Vercel
 
+Prévoir 5h minimum
+
 ## Les images dans mon projet
 
 - Mettre les images dans src/assets
