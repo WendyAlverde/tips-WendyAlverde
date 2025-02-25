@@ -27,7 +27,3 @@ Le navigateur lira donc d'abord le webp et si il n'est pas pris en compte par le
 ## Codes
 
 - Minify : Extention Prettier - Code formatter pour minifier le code
-
-## Sémantique
-
-- Role et Aria-label
