@@ -22,6 +22,12 @@ Aller dans l'onglet Domain
 
 ### Domaine sur OVH
 
+L'enregistrement A sert à rediriger le **domaine principal** (mon-nom-domaine.com) vers Vercel.
+
+L'enregistrement CNAME set à rediriger le **sous-domaine** www vers Vercel.
+
+Cela permet d’avoir mon-nom-domaine.com et www.mon-nom-domaine.com qui fonctionnent tous les deux correctement avec Vercel.
+
 - Se connecter à OVH
 - Dans le tableau de bord, cliquez sur "Domaines" pour voir la liste de vos noms de domaine.
 - Cliquez sur le nom de domaine que vous souhaitez configurer.
@@ -50,8 +56,14 @@ Si le type d'enregistrement CNAME n'existe pas (sinon faite modifier l'enregistr
   3- Dans le champ "Sous-domaine", laissez vide (pour le domaine principal) ou mettez www (pour le sous-domaine).
   
   4- Cible : Entrez le nom de votre domaine principal (par exemple, votre-domaine.com).
+
+  5- Valeur : cname.vercel-dns.com (ou la valeur recommandée par Vercel)
   
-  5- Cliquer sur Valider ou Ajouter
+  6- Cliquer sur Valider ou Ajouter
+
+  Une fois les changements effectués, il peut falloir jusqu’à 24h pour que les DNS se propagent.
+  
+  Vérifier la propagation des DNS sur whatsmydns : [whatsmydns.net](https://www.whatsmydns.net/).
 
   ### Vérifier que le nom de domaine sur Vercel soit correcte
 
