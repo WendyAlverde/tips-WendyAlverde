@@ -1,5 +1,9 @@
 # Svelte
 
+## index.html
+
+- Dans une application utilisant Vite (vu la présence de vite.config.js), les fichiers du dossier public sont servis à la racine du site, sans le préfixe /public/. Il faut donc écrire le lien de l'image, de cette manière : content="https://www.expertise-automobile-ieta.fr/logoIetaBgGood.jpg"
+
 ## Expression régulière (regex)
 
 ### Téléphone
