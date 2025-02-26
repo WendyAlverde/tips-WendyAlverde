@@ -181,7 +181,7 @@ Dans le terminal mettre les commandes :
 - 
 Le mot de passe d'application permet de se connecter à ton compte Google sans exposer ton mot de passe réel. C'est une mesure de sécurité supplémentaire, qui empêche des applications non sécurisées ou non autorisées d'accéder à ton compte Gmail directement.
 
-2. OUTLOOK
+2. OUTLOOK / Mailjs
 
 ## Dans le terminal de notre projet
 
@@ -237,7 +237,7 @@ function envoyerFormulaire() {
    
       // Informations à envoyer
       let templateParams = {
-          to_email: "ptiscarabe2036@msn.com", // Remplacez par votre e-mail
+          to_email: "lemail@outlook.com", // Remplacez par votre e-mail
           nom,
           email,
           tel,
@@ -250,10 +250,10 @@ function envoyerFormulaire() {
       // Envoi via EmailJS
       emailjs
           .send(
-              "service_wjuacsr",
-              "template_4bt7327",
+              "service_azerty",
+              "template_aze123",
               templateParams,
-              "Fd61aLMeIyHeGoWgm"
+              "aZe1R2t3Y"
           )
           .then(
               function (response) {
@@ -294,3 +294,93 @@ function envoyerFormulaire() {
 ``` Svelte
  <button type="submit" disabled={!!errorMessageForm}>Envoyer</button>
 ```
+
+## Sur le site de Mailjs
+
+- Se rendre sur EmailJS et crée un compte  : https://www.emailjs.com/
+- Ajouter un service email avec le compte Outlook.
+- Créer un template d'email avec les champs qu'on veut envoyer
+
+### Le template
+
+Exemple :
+
+``` HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        h2 {
+            color: #0056b3;
+        }
+        .info {
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            font-style: italic;
+            color: #444;
+            background: #fffbe6;
+            padding: 10px;
+            border-left: 3px solid #f5b400;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nouvelle Demande de Contact</h2>
+        <p>Bonjour,</p>
+        <p>Vous avez reçu une nouvelle demande via le formulaire de contact. Voici les détails :</p>
+
+        <div class="info">
+            <strong>👤 Nom :</strong> {{nom}}<br>
+            <strong>📧 E-mail :</strong> {{email}}<br>
+            <strong>📞 Téléphone :</strong> {{tel}}<br>
+            <strong>🚗 Objet :</strong> {{demande}}<br>
+        </div>
+
+        <div class="message">
+            <strong>✏️ Message :</strong><br>
+            "{{commentaire}}"
+        </div>
+
+        <p>Merci de prendre contact avec cette personne dès que possible.</p>
+
+        <div class="footer">
+            <p>📌 Cet e-mail a été généré automatiquement par votre site web.</p>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+### Les données qu'il faut rentrer dans le code
+
+- Service ID : Disponible sur l'onglet Email Services.
+- Template ID : Va dans Email Templates et copie ton template ID.
+- Public Key : Disponible dans la section Account.
+
+
+
