@@ -10,12 +10,21 @@
 
 ## Dans le terminal
 
+### Si utilisation de Create React App
+
 - Entrer la commande : ```npm init react-app nom-projet```
 - cd ```nom-projet```
 - code .
 Du projet sur VSC :
 - Ouvrir un nouveau terminal
 - ```npm start```
+
+### Si utilisation de Vite
+
+- Entrer la commande : ```npm create vite@latest . -- --template react```  Le . dans vite@latest . indique qu’on installe dans le dossier actuel.
+- Installer les dépendances : ```npm install```
+- Installer Sass pour pouvoir utiliser SCSS : ```npm install -D sass```
+- Lancer le projet : ```npm run dev```
 
 ## Vider les dossiers et fichiers inutiles
 
