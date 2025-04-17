@@ -39,7 +39,9 @@ Dans le dossier src :
 -	Vider le contenu de App.css
 -	Supprimer le logo.svg
 
-Structurer les dossier comme ceci :
+## Créer les dossiers et fichiers utiles
+
+Structurer les dossiers comme ceci :
 ```bash
 src/
 ├── assets/         # images, logos, etc.
@@ -51,13 +53,12 @@ src/
 ├── main.jsx        # point d’entrée React
 ```
 
-## Créer les dossiers et fichiers utiles
-
 Dans le dossier src :
-  - Créer les dossiers styles et assets
   - Déplacer le fichier App.css dans le dossier styles
-  - Changer le chemin dans App.js par ```import './styles/App.css';```
+  - Changer le chemin dans App.jsx par ```import './styles/App.css';```
 
 Si projet avec une base de données :
 - Créer le fichier .env.example
 - Créer le fichier .env avec l'adresse de la BDD (peut changer d'un pc à un autre)
+
+Si travail en **scss**, changer les extentions css par scss
