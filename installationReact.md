@@ -26,6 +26,10 @@ Du projet sur VSC :
 - Installer Sass pour pouvoir utiliser SCSS : ```npm install -D sass```
 - Lancer le projet : ```npm run dev```
 
+### Installation router
+
+- ```npm install react-router-dom```
+
 ## Vider les dossiers et fichiers inutiles
 
 Dans le dossier public :
@@ -62,3 +66,43 @@ Si projet avec une base de données :
 - Créer le fichier .env avec l'adresse de la BDD (peut changer d'un pc à un autre)
 
 Si travail en **scss**, changer les extentions css par scss
+
+## Router
+
+Si on importe un composant avec import Nom from './chemin', il doit y avoir export default Nom dans le fichier ciblé.
+
+- Dans le fichier App.jsx :
+
+```jsx
+function App() {
+	return (
+		<BrowserRouter>
+		<Header />
+		<main>
+			<Routes>
+			  <Route path="/" element={<Home />} />
+			</Routes>
+		</main>
+		<Footer />
+		</BrowserRouter>
+	);
+}
+
+export default App;
+```
+
+- Dans le fichier Home.jsx :
+
+```jsx
+function Home() {
+    return (
+        <section style={{ padding: "2rem" }}>
+            <h1>Bienvenue !</h1>
+            <p>Sur la page Home</p>
+        </section>
+    );
+}
+
+export default Home;
+```
+
