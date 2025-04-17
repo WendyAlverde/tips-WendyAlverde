@@ -74,6 +74,8 @@
 			{
 				"@context": "https://schema.org",
 				"@type": "ProfessionalService",
+				"inLanguage": "fr",
+				"serviceType": "***",
 				"name": "***",
 				"image": "https://urlsite/***.png",
 				"description": "***",
