@@ -39,6 +39,18 @@ Dans le dossier src :
 -	Vider le contenu de App.css
 -	Supprimer le logo.svg
 
+Structurer les dossier comme ceci :
+```bash
+src/
+├── assets/         # images, logos, etc.
+├── styles/         # tes fichiers .scss
+├── lib/
+│   ├── components/ # tous les composants réutilisables
+│   └── pages/      # chaque "page" de ton site (Accueil, Contact, etc.)
+├── App.jsx         # composant racine qui appelle les pages
+├── main.jsx        # point d’entrée React
+```
+
 ## Créer les dossiers et fichiers utiles
 
 Dans le dossier src :
