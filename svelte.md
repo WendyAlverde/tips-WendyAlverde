@@ -1,28 +1,5 @@
 # Svelte
 
-## index.html
-
-### Carte des réseaux sociaux
-
-Dans une application utilisant Vite (vu la présence de vite.config.js), les fichiers du dossier public sont servis à la racine du site, sans le préfixe /public/. Il faut donc écrire le lien de l'image, de cette manière : content="https://www.expertise-automobile-ieta.fr/logoIetaBgGood.jpg"
-
-```HTML
-<meta property="og:title" content="Expertise Automobile IETA - Évaluations et Conseils" />
-<meta property="og:description" content="Obtenez une expertise automobile fiable avec IETA. Contactez-nous pour une évaluation précise." />
-<meta property="og:image" content="https://expertise-automobile-ieta.fr/images/preview.jpg" />
-<meta property="og:url" content="https://expertise-automobile-ieta.fr" />
-<meta property="og:type" content="website" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Expertise Automobile IETA - Évaluations et Conseils" />
-<meta name="twitter:description" content="Obtenez une expertise automobile fiable avec IETA. Contactez-nous pour une évaluation précise." />
-<meta name="twitter:image" content="https://expertise-automobile-ieta.fr/images/preview.jpg" />
-```
-- Tester sur Facebook : https://developers.facebook.com/tools/debug/
-- Tester sur Twitter : https://threadcreator.com/tools/twitter-card-validator
-- Tester sur LinkedIn : https://www.linkedin.com/post-inspector/
-
 ## Expression régulière (regex)
 
 ### Téléphone
