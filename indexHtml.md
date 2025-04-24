@@ -1,5 +1,13 @@
 # SEO, accessibilité et bonnes pratiques
 
+## Carte de publication
+
+- Tester sur Facebook : https://developers.facebook.com/tools/debug/
+- Tester sur Twitter : https://threadcreator.com/tools/twitter-card-validator
+- Tester sur LinkedIn : https://www.linkedin.com/post-inspector/
+
+## Le code
+
 - Remplacer les **urlsite** et *** par les bonnes informations
 
 - **js** pour Svelte, **jsx** pour React
