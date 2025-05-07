@@ -1,5 +1,7 @@
 # Performance du site
 
+Explication des temps de chargements : https://www.yeswedev.bzh/blog/performance-site-internet#:~:text=La%20performance%20d'un%20site%20web%20correspond%20%C3%A0%20l'optimisation,interactions%20simples%20et%20r%C3%A9actives%2C%20etc%E2%80%A6
+
 ## Images
 
 ### Convertir jpg/png en webp
@@ -27,3 +29,5 @@ Le navigateur lira donc d'abord le webp et si il n'est pas pris en compte par le
 ## Codes
 
 - Minify : Extention Prettier - Code formatter pour minifier le code
+
+
