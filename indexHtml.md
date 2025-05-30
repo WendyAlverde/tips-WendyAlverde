@@ -6,6 +6,16 @@
 - Tester sur Twitter : https://threadcreator.com/tools/twitter-card-validator
 - Tester sur LinkedIn : https://www.linkedin.com/post-inspector/
 
+## Le logo
+
+| Format  | Emplacement               | Utilisation                                 | À éviter                              |
+| ------- | ------------------------- | ------------------------------------------- | ------------------------------------- |
+| `.ico`  | `/public/logo.ico`        | Favicon (toutes plateformes)                | Autres usages                         |
+| `.png`  | `/public/logo.png`        | SEO, Open Graph, Twitter Card               | Animations, dark mode, Photos lourdes |
+| `.webp` | `/public/logo.webp`       | Léger, remplace PNG/JPG (Chrome, Firefox)   | Réseaux sociaux (pas tous supportent), Ancien Safari |
+| `.jpg`  | `/public/logo.jpg`        | Photos, réseaux sociaux, fallback universel | Logos, transparence                   |
+| `.svg`  | `src/asset/logo/logo.jpg` | Logo, animation, stylable, responsive       | Favicon, OpenGraph, Twitter Card      |
+
 ## Le code
 
 - Remplacer les **urlsite** et *** par les bonnes informations
