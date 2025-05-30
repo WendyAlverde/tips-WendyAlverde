@@ -72,6 +72,19 @@ Si on préfère garder un historique,  il faut retirer le fast-forward avec --no
 Si il y a oublie de pull avant de travailler sur la branche :
 **git pull origin nom de la branche --rebase** : Récupérer les modifications du dépôt distant avant de pouvoir pousser les notres
 
+## Si modification de nom de projet
+
+Changement sur le terminal:
+- mv ancienNomProjet nouveauNomProjet
+
+Vérifier ou changer l’URL du dépôt distant :
+- cd nouveauNomProjet
+- git remote -v
+
+Si l'URL n'est plus bonne (avec ancienNomProjet)
+- git remote set-url origin git@github.com:ton-pseudo/nouveauNomProjet.git
+
+
 
     
 *J'ai pris les infos sur les cours O'clock, sur GitHUb et sur la chaîne "Bande de Codeurs" sur Youtube, il a fait deux, très bonnes vidéos explicatives*
