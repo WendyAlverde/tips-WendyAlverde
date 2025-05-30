@@ -40,8 +40,11 @@ Dans le dossier public :
   - La description
 
 Dans le dossier src :
--	Vider le contenu de App.css
--	Supprimer le logo.svg
+- Vider le contenu de App.css
+- Supprimer le logo.svg
+
+Dans le fichier package.json (pour que le navigateur s'ouvre automatiquement) :
+- À la ligne "dev": "vite", remplacer par "dev": "vite --open",
 
 ## Créer les dossiers et fichiers utiles
 
