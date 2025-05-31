@@ -105,7 +105,10 @@ function Home() {
         </section>
     );
 }
-
 export default Home;
 ```
 
+## Les petit plus
+
+Un fichier jsx ne supporte qu'un seul parent. Donc si il n'y a pas besoin de class et design entourant les différentes sections, il est préférable d'utiliser :
+- Les fragments vide : ```<>  </>```
