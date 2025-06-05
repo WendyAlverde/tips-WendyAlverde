@@ -75,22 +75,37 @@ Si il y a oublie de pull avant de travailler sur la branche :
 ## Si modification de nom de projet
 
 Changement sur le terminal:
-- mv ancienNomProjet nouveauNomProjet
+- ```mv ancienNomProjet nouveauNomProjet```
 
 Vérifier ou changer l’URL du dépôt distant :
 - cd nouveauNomProjet
-- git remote -v
+- ```git remote -v```
 
 Si l'URL n'est plus bonne (avec ancienNomProjet)
-- git remote set-url origin git@github.com:ton-pseudo/nouveauNomProjet.git
+- ```git remote set-url origin git@github.com:ton-pseudo/nouveauNomProjet.git```
 
 ## Vérifier si le dossier est lié au GitHub d'un autre dev
 
 Ce placer dans le dossier du projet
 - ```git remote -v```
 - Si on y voit quelque chose comme ceci :
-  origin  https://github.com/autreDev/project.git (fetch)
-  origin  https://github.com/autreDev/project.git (push)
+  - origin  https://github.com/autreDev/project.git (fetch)
+  - origin  https://github.com/autreDev/project.git (push)
 - ```git remote remove origin``` : Supprimer l'ancien remote
+
+## Supprimer une branche
+
+- ```git branch -d nom-de-la-branche``` : Utilise -d (safe delete) pour supprimer si la branche est déjà fusionnée
+- ```git branch -D nom-de-la-branche``` : Utilise -D (force delete) si elle n'est pas fusionnée ou si tu veux forcer la suppression
+- ```git push origin --delete nom-de-la-branche``` : Supprimer une branche distante (sur GitHub)
+
+Pour supprimer toute les branches locales
+- ```git checkout main``` : Se placer sur main
+- ```git branch | grep -v "main" | xargs git branch -D``` : supprime toutes les branches locales sauf main
+
+## Modifier le nom d'une branche
+
+- ```git branch -m main```
+
     
 *J'ai pris les infos sur les cours O'clock, sur GitHUb et sur la chaîne "Bande de Codeurs" sur Youtube, il a fait deux, très bonnes vidéos explicatives*
