@@ -52,12 +52,22 @@ Structurer les dossiers comme ceci :
 ```bash
 src/
 ├── assets/         # images, logos, etc.
-├── styles/         # tes fichiers .scss
 ├── lib/
-│   ├── components/ # tous les composants réutilisables
-│   └── pages/      # chaque "page" de ton site (Accueil, Contact, etc.)
+    ├── components/ # tous les composants réutilisables
+	├── data/
+    └── pages/      # chaque "page" du site (Accueil, Contact, etc.)
+├── styles/         # les fichiers .scss
+	├── bases/
+		├── _global.scss
+		├── _mixins.scss
+		├── _reset.scss
+		└── _variables.scss
+	├── components/ # header et footer
+	└── pages/
+	└── main.scss
+
 ├── App.jsx         # composant racine qui appelle les pages
-├── main.jsx        # point d’entrée React
+└── main.jsx        # point d’entrée React
 ```
 
 Dans le dossier src :
@@ -112,3 +122,5 @@ export default Home;
 
 Un fichier jsx ne supporte qu'un seul parent. Donc si il n'y a pas besoin de class et design entourant les différentes sections, il est préférable d'utiliser :
 - Les fragments vide : ```<>  </>```
+
+Update 27/09/2025
