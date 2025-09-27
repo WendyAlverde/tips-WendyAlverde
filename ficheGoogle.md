@@ -33,3 +33,5 @@
 15. Accepter ou non d'être mis en avant sur des publicités Google
 
 16. Modifier la fiche à tout moment pour modifier, ajouter ou supprimer une information.
+
+Update 01/05/2025
