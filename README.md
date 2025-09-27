@@ -6,13 +6,15 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 **accessibilite** = Aide sur l'accessibilité d'un site
 
-**debutProjetFront** = Aide pour savoir par où commencer le code, HTML puis CSS
+**deployVercel** = Déploiement d'un site via Vercel
 
-**deployDirectus** = Essai de déploiement de Directus, j'ai placé mes essais ici pour le moment
+**FicheGoogle** = Création de la fiche
+
+**formulaireContact** = Formulaire de Contact avec Svelte
 
 **git** = Commandes git et explications
 
-**installationDirectus** = Commande dans le terminal pour installer Directus et bug d'ouverture
+**indexHtml** = SEO pour le fichier index.html
 
 **installationReact** = Étape à réaliser pour installer REACT et commencer avec un projet propre et fonctionnel
 
@@ -24,14 +26,10 @@ Des petites aides sur git, le code, Svelte, Directus, CSS et autres
 
 **premiereFoisSurRepo** =  Pour les git pull, les branches, les git push et Pull Request
 
-**scriptSvelteBoucle** = Aide à savoir par quoi commencer quand on boucle en Svelte
-
 **serveurLocal** = Accéder au serveur local sur le téléphone
-
-**sql** = Des petites notes prisent en faisant le dossier professionnel
 
 **styles** = Quelques conseils pour modifier le style par défaut des navigateurs
 
-**svelte** = Rappel d'utilisation de js dans Svelte
+**svelte** = Rappel d'utilisation de js dans Svelte + regex
 
-**vercel** = Imports d'images en JS et déploiement correct du site
+Update 27/09/2025
