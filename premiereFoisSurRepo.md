@@ -17,6 +17,11 @@
 
 ## Pull Request
 
-- On fait une Pull Request seulement lorsque toutes les fonctionnalitées de notre branche **fonctionne**
-- Lorsqu'on fait la Pull Request on pense à vérifier où on veut merge donc dans dev
+- On fait une Pull Request seulement lorsque toutes les fonctionnalitées de notre branche **fonctionnent**
+- Lorsqu'on fait la Pull Request on pense à vérifier où on veut merge
+<img width="303" height="69" alt="image" src="https://github.com/user-attachments/assets/96196afb-3607-4e03-b085-c5122638ba5e" />
+
+Dans le cas de la capture on fusionne notre branche dev dans main 
 - On laisse le Référent Git, fusionner et fermer les Pull Request
+
+Update 27/09/2025
