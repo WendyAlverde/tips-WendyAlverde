@@ -92,3 +92,5 @@ Si le type d'enregistrement CNAME n'existe pas (sinon faite modifier l'enregistr
 | **WhatsApp**     | 1200 x 630 px  |
 
 - Sinon mettre une seule image universelle : 1200 x 630 px est le meilleur compromis
+
+Update 01/03/2025
