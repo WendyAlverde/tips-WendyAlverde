@@ -34,4 +34,4 @@
 
 16. Modifier la fiche à tout moment pour modifier, ajouter ou supprimer une information.
 
-Update 01/05/2025
+Update 02/02/2026
