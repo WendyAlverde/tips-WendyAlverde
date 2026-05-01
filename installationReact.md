@@ -21,7 +21,7 @@ Du projet sur VSC :
 
 ### Si utilisation de Vite
 
-- Entrer la commande : ```npm create vite@latest . -- --template react```  Le . dans vite@latest . indique qu’on installe dans le dossier actuel.
+- Entrer la commande : ```npm create vite@latest .```  Le . dans vite@latest . indique qu’on installe dans le dossier actuel. Puis choisir manuellement React puis JavaScript + React Compiler pour bénéficier des optimisations automatiques de performance.
 - Installer les dépendances : ```npm install```
 - Installer Sass pour pouvoir utiliser SCSS : ```npm install -D sass```
 - Lancer le projet : ```npm run dev```
@@ -33,7 +33,7 @@ Du projet sur VSC :
 ## Vider les dossiers et fichiers inutiles
 
 Dans le dossier public :
-- Supprimer le favicon.ico, logo192.png et logo512.png
+- Supprimer les fichiers
 - Dans index HTML : 
   - Changer la langue
   - Le title
@@ -52,10 +52,10 @@ Structurer les dossiers comme ceci :
 ```bash
 src/
 ├── assets/         # images, logos, etc.
-├── lib/
-    ├── components/ # tous les composants réutilisables
-	├── data/
-    └── pages/      # chaque "page" du site (Accueil, Contact, etc.)
+
+├── components/ # tous les composants réutilisables
+├── data/
+└── pages/      # chaque "page" du site (Accueil, Contact, etc.)
 ├── styles/         # les fichiers .scss
 	├── bases/
 		├── _global.scss
@@ -123,4 +123,4 @@ export default Home;
 Un fichier jsx ne supporte qu'un seul parent. Donc si il n'y a pas besoin de class et design entourant les différentes sections, il est préférable d'utiliser :
 - Les fragments vide : ```<>  </>```
 
-Update 27/09/2025
+Update 01/05/2026
